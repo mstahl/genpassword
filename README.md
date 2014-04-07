@@ -1,6 +1,6 @@
 # Genpassword
 
-TODO: Write a gem description
+Just generates passwords. You don't get any simpler than that.
 
 ## Installation
 
@@ -18,7 +18,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use genpassword, just type `genpassword`. The default is to use symbols,
+letters, and numbers, but these can be switched off individually.
+
+    Usage:
+      genpassword generate
+
+    Options:
+      -l, [--letters], [--no-letters]
+                                       # Default: true
+      -n, [--numbers], [--no-numbers]
+                                       # Default: true
+      -s, [--symbols], [--no-symbols]
+                                       # Default: true
+      -c, [--chars=N]
+                                       # Default: 12
+
+    Description:
+      `genpassword` or `genpassword generate` will generate you a random
+      password using letters, numbers, and symbols. Turn these off with the
+      `--no-letters`, `--no-numbers`, and `--no-symbols` options. Change
+      the length of the generated password with the `-c` option.
 
 ## Contributing
 

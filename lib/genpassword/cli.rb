@@ -6,7 +6,13 @@ class Genpassword::CLI < Thor
   NUMBERS = ('0'..'9').to_a
   SYMBOLS = '<>/\[]{}()-=_+!@#$%^&*~`,.;:|'.split(//)
 
-  desc 'generate', 'generate a password'
+  desc 'generate', 'Generate a random password'
+  long_desc <<-LONGDESC
+    `genpassword` or `genpassword generate` will generate you a random password
+    using letters, numbers, and symbols. Turn these off with the
+    `--no-letters`, `--no-numbers`, and `--no-symbols` options. Change the length
+    of the generated password with the `-c` option.
+  LONGDESC
   option :letters, type: :boolean, aliases: [ '-l' ], default: true
   option :numbers, type: :boolean, aliases: [ '-n' ], default: true
   option :symbols, type: :boolean, aliases: [ '-s' ], default: true
